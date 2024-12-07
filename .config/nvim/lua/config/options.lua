@@ -5,3 +5,16 @@
 vim.opt.wrap = false
 
 -- markdown: disable conceal, disable render by default
+-- vim.api.nvim_create_autocmd({ "FileType" }, {
+--   pattern = { "markdown" },
+--   callback = function()
+--     vim.wo.conceallevel = 0
+--   end,
+-- })
+
+-- terminal: <c-l> to clear
+vim.api.nvim_create_autocmd("TermEnter", {
+  callback = function(ev)
+    vim.keymap.set("t", "<c-l>", "<c-l>", { buffer = ev.buf, nowait = true })
+  end,
+})
