@@ -5,7 +5,6 @@ local random_quotes = function()
 end
 
 local quote = random_quotes()
-local source = quote.source and ("\n\n— " .. quote.source) or ""
 
 -- wrap text
 local function wrap_text(quote_table, width)
@@ -17,7 +16,7 @@ local function wrap_text(quote_table, width)
   -- Process the quote text
   for line in input_text:gmatch("[^\n]*") do
     if line == "" then
-      table.insert(wrapped_lines, "")
+      -- table.insert(wrapped_lines, "")
     else
       local line_start = 1
       while line_start <= #line do
