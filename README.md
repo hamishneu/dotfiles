@@ -1,3 +1,7 @@
 # simple dots
 
-Here are my simple dotfiles for macOS, managed with GNU stow.
+- os: macos sequoia
+- wm: yabai + skhd
+- shell: fish
+- term: ghostty
+- editor: nvim

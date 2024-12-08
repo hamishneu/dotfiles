@@ -3,6 +3,7 @@
 -- Add any additional options here
 
 vim.opt.wrap = false
+vim.opt.cursorlineopt = "number"
 
 -- markdown: disable conceal, disable render by default
 -- vim.api.nvim_create_autocmd({ "FileType" }, {
