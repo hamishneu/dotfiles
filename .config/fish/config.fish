@@ -14,7 +14,12 @@ alias v="nvim"
 alias v.="nvim ."
 
 # python sucks
-alias venv='[ ! -d "./venv" ] && python3 -m venv venv; source venv/bin/activate'
+function venv
+    if not test -d "./venv"
+        python3 -m venv venv
+    end
+    source venv/bin/activate.fish
+end
 
 # modern tooling (see https://github.com/ibraheemdev/modern-unix)
 alias ls eza

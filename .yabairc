@@ -13,7 +13,6 @@
 yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
 yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
 yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
-
 # global settings
 yabai -m config                                 \
     mouse_follows_focus          off            \
@@ -45,17 +44,17 @@ yabai -m config                                 \
     left_padding                 8              \
     right_padding                8              \
     window_gap                   8              \
-    layout                       bsp            \
+    layout                       float          \
     mouse_modifier               fn             \
     mouse_action1                move           \
     mouse_action2                resize         \
     mouse_drop_action            swap
 
-# yabai -m rule --add app!="^(iTerm 2)$" manage=off 
-yabai -m rule --add app="iTerm2" manage=on
-yabai -m rule --add app="ColorSlurp" manage=off
-
-# zsh $HOME/.config/sketchybar/items/watchlyrics.sh &
 # borders active_color=0xffE6684E inactive_color=0xff494d64 width=3.0 &
 
 echo "yabai configuration loaded.."
+
+# yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --focus next; sleep 0.01; yabai -m space --focus prev'
+# yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --focus next; sleep 0.01; yabai -m space --focus prev'
+# yabai -m signal --add app='^Finder$' event=window_created action='yabai -m space --focus next; sleep 0.01; yabai -m space --focus prev'
+# yabai -m signal --add app='^Finder$' event=window_destroyed action='yabai -m space --focus next; sleep 0.01; yabai -m space --focus prev'
