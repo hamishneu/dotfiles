@@ -1,19 +1,20 @@
 local random_quotes = function()
-  math.randomseed(os.time())
-  local quotes = require("quotes")
-  return quotes[math.random(#quotes)]
+  local handle = io.popen("sh quote.sh")
+  local result = handle and handle:read("*a") or ""
+  if handle then
+    handle:close()
+  end
+  return result
 end
 
 local quote = random_quotes()
 
 -- wrap text
-local function wrap_text(quote_table, width)
-  local input_text = quote_table.quote or ""
-  local source = quote_table.source and ("\n\n— " .. quote_table.source) or ""
+local function wrap_text(quote, width)
+  local input_text = quote or ""
 
   local wrapped_lines = {}
 
-  -- Process the quote text
   for line in input_text:gmatch("[^\n]*") do
     if line == "" then
       -- table.insert(wrapped_lines, "")
@@ -41,7 +42,7 @@ local function wrap_text(quote_table, width)
 
   -- Concatenate wrapped lines and append the source
   local wrapped_text = table.concat(wrapped_lines, "\n")
-  return wrapped_text .. source
+  return wrapped_text
 end
 
 return {
