@@ -1,7 +1,11 @@
 return {
   -- add theme
   {
-    "datsfilipe/vesper.nvim",
+    "navarasu/onedark.nvim",
+    opts = {
+      style = "darker",
+      transparent = true,
+    },
     priority = 1000,
   },
 
@@ -9,7 +13,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "vesper",
+      colorscheme = "onedark",
     },
   },
 }
