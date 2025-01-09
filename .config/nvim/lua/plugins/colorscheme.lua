@@ -1,19 +1,12 @@
 return {
-  -- add theme
-  {
-    "navarasu/onedark.nvim",
-    opts = {
-      style = "darker",
-      transparent = true,
-    },
-    priority = 1000,
-  },
+  -- add gruvbox
+  { "ellisonleao/gruvbox.nvim" },
 
-  -- Configure LazyVim to load
+  -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "onedark",
+      colorscheme = "gruvbox",
     },
   },
 }
