@@ -13,7 +13,7 @@ shift + alt - 4 : yabai -m window --space 4; sketchybar --trigger windows_on_spa
 shift + alt - 5 : yabai -m window --space 5; sketchybar --trigger windows_on_spaces
 
 # opens Terminal
-alt - return : osascript ~/.local/scripts/Ghostty.scpt
+alt - return : open /Applications/iTerm.app/
 alt - w : open /Applications/Google\ Chrome.app/
 
 # Navigation
@@ -45,7 +45,7 @@ alt - t : yabai -m window --toggle float --grid 19:19:1:1:17:17
 # alt - p : yabai -m window --toggle sticky --toggle topmost --toggle pip
 
 # toggle between iPhone mode and Linux mode
-alt - shift - b : yabai -m space --layout bsp
-alt - b : yabai -m space --layout stack
+#alt - shift - b : yabai -m space --layout bsp
+#alt - b : yabai -m space --layout stack
 
 

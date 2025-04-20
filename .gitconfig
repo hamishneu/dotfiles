@@ -1,26 +1,8 @@
+[user]
+	name = hamishneu
+	email = hamishneu@gmail.com
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
-[user]
-	name = hamishneu
-	email = hamishneu@gmail.com
-	signingkey = "key::ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHqgh6L34xKvobuJIoU0hszFdi55ja1SMFSF1YsF/VwU13i5VPQelCML/8OBCxes6k6+8bkTbQ0fRKo0K+pHUg0= Personal-Key@secretive.Hamish’s-MacBook-Pro.local"
-[push]
-	autoSetupRemote = true
-	default = tracking
-[commit]
-	gpgsign = true
-[branch]
-  autosetuprebase = always
-[color]
-	ui = true
-[github]
-	user = hamishneu
-[init]
-  defaultBranch = master
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	defaultKeyCommand = ssh-add -L

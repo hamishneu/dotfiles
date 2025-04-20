@@ -1,3 +1,6 @@
+.gitconfig
+*/.DS_STORE
+
 # nvim stuff
 .config/nvim/tt.*
 .config/nvim/.tests
