@@ -85,4 +85,4 @@ end
 set -Ux GPG_TTY (tty)
 
 fish_add_path /Users/hamish/Documents/20-dev/25-scripts/quote.sh
-/Users/hamish/.local/bin/mise activate fish | source
+#/Users/hamish/.local/bin/mise activate fish | source
